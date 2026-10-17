@@ -1,0 +1,62 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f5f7;
+  color: #252d35;
+}
+
+.admin-page { max-width: 1100px; margin: auto; padding: 28px 18px; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+header h1 { margin: 4px 0; }
+header p { color: #69737d; }
+.small-title { font-size: 12px; letter-spacing: 2px; font-weight: bold; }
+.admin-tag { background: #e2ece7; color: #315b49; padding: 9px 12px; border-radius: 20px; }
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.summary-card, .records {
+  background: white;
+  border: 1px solid #e3e7ea;
+  border-radius: 9px;
+}
+
+.summary-card { padding: 16px; }
+.summary-card p { margin: 0 0 8px; color: #68727c; }
+.summary-card strong { font-size: 26px; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+button { border: 0; padding: 9px 12px; border-radius: 5px; background: #315b49; color: white; cursor: pointer; }
+button.active { background: #172e24; }
+button.secondary { background: #a87520; }
+button.danger { background: #a33d3d; }
+
+.records { padding: 18px; }
+.records-heading { display: flex; align-items: center; justify-content: space-between; }
+.records-heading h2 { text-transform: capitalize; }
+
+.record {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-top: 1px solid #e8ebed;
+}
+
+.record-text { min-width: 0; }
+.record h3 { margin: 0 0 6px; overflow-wrap: anywhere; }
+.record p { margin: 0; color: #68727c; overflow-wrap: anywhere; }
+.actions { display: flex; flex-wrap: wrap; gap: 6px; }
+.message { padding: 10px; background: #e5f2e9; border-radius: 5px; }
+.empty { padding: 20px; text-align: center; color: #68727c; }
+
+@media (max-width: 650px) {
+  header, .record { align-items: flex-start; flex-direction: column; }
+}
